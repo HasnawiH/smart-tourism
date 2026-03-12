@@ -1,4 +1,4 @@
-package com.wicombit.valencia.expo
+package com.hasnawi.majane
 
 import android.app.Application
 import android.content.res.Configuration

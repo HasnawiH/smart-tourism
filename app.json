@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "Valencia",
-    "slug": "valencia",
+    "name": "Majane",
+    "slug": "majane",
     "privacy": "unlisted",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/new/icon-majane.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/new/splash-majane.png",
       "resizeMode": "cover",
       "backgroundColor": "#b73070"
     },
@@ -20,17 +20,17 @@
     ],
     "ios": {
       "buildNumber": "1",
-      "bundleIdentifier": "com.wicombit.valencia.expo",
+      "bundleIdentifier": "com.hasnawi.majane",
       "supportsTablet": true,
       "requireFullScreen": true
     },
     "android": {
       "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/new/adaptive-icon.png",
         "backgroundColor": "#b73070"
       },
-      "package": "com.wicombit.valencia.expo",
+      "package": "com.hasnawi.majane",
       "permissions": [
         "android.permission.READ_EXTERNAL_STORAGE",
         "android.permission.READ_INTERNAL_STORAGE",
@@ -71,10 +71,10 @@
               "appExtensions": [
                 {
                   "targetName": "OneSignalNotificationServiceExtension",
-                  "bundleIdentifier": "com.wicombit.valencia.expo.OneSignalNotificationServiceExtension",
+                  "bundleIdentifier": "com.hasnawi.majane.OneSignalNotificationServiceExtension",
                   "entitlements": {
                     "com.apple.security.application-groups": [
-                      "group.com.wicombit.valencia.expo.onesignal"
+                      "group.com.hasnawi.majane.onesignal"
                     ]
                   }
                 }

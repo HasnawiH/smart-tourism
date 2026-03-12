@@ -83,9 +83,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.wicombit.valencia.expo'
+    namespace 'com.hasnawi.majane'
     defaultConfig {
-        applicationId 'com.wicombit.valencia.expo'
+        applicationId 'com.hasnawi.majane'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
