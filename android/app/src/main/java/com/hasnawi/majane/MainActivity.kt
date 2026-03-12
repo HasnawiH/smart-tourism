@@ -1,4 +1,4 @@
-package com.wicombit.valencia.expo
+package com.hasnawi.majane
 
 import android.os.Build
 import android.os.Bundle

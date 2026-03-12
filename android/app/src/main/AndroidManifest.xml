@@ -29,8 +29,8 @@
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:scheme="com.wicombit.valencia.expo"/>
-        <data android:scheme="exp+valencia"/>
+        <data android:scheme="com.hasnawi.majane"/>
+        <data android:scheme="exp+majane"/>
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>
