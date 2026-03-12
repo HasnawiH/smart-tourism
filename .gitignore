@@ -1,0 +1,58 @@
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+.expo-shared/
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Android build artifacts
+android/.gradle/
+android/build/
+android/app/build/
+# android/local.properties
+# android/lcoal.properties
+
+# iOS build artifacts
+ios/build/
+ios/Pods/
+ios/*.xcworkspace/
+
+# Metro
+.metro-health-check*
+.metro/
+
+# Debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+*.pem
+.DS_Store?
+._*
+
+# Lock files (keep only one)
+yarn.lock
+package-lock.json
+
+# local env files
+.env*.local

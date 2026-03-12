@@ -1,15 +1,21 @@
 //////////////////// CONFIG APP
+import {
+    APP_URL,
+    APP_DEFAULT_LANG,
+    APP_THEME_MODE,
+    APP_ONESIGNAL_APP_ID,
+} from '@env';
 
 const ConfigApp = {
 
     // backend url (with slash at end)
-    URL: "https://demos.wicombit.com/city/",
+    URL: APP_URL,
 
-    DEFAULTLANG: "en",
+    DEFAULTLANG: APP_DEFAULT_LANG,
 
-    THEMEMODE: "light", // light or dark
+    THEMEMODE: APP_THEME_MODE, // light or dark
 
-    ONESIGNAL_APP_ID: "", // your onesignal key
+    ONESIGNAL_APP_ID: APP_ONESIGNAL_APP_ID, // your onesignal key
 
 };
 
