@@ -10,7 +10,7 @@ import usePreferences from '../hooks/usePreferences';
 
 export default function About() {
 
-  const {theme} = usePreferences();
+  const { theme } = usePreferences();
   const [isLoaded, setIsLoaded] = useState(false);
   const [item, setItem] = useState('');
 
@@ -25,22 +25,22 @@ export default function About() {
 
   if (isLoaded) {
 
- return (
+    return (
 
-	<ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
-    <View style={Styles.PageScreen}>
-    <Image source={theme === "dark" ? require('../../assets/logo-white.png') : require('../../assets/logo.png')} resizeMode={"contain"} style={Styles.PageLogo} />
-    <HTMLView value={"<div>"+ item.st_aboutus +"</div>"} stylesheet={theme === "dark" ? HTMLStylesDark : HTMLStyles}/>
-    </View>
-  </ScrollView>
+      <ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
+        <View style={Styles.PageScreen}>
+          <Image source={theme === "dark" ? require('../../assets/logo-white.png') : require('../../assets/logo.png')} resizeMode={"contain"} style={Styles.PageLogo} />
+          <HTMLView value={"<div>" + item.st_aboutus + "</div>"} stylesheet={theme === "dark" ? HTMLStylesDark : HTMLStyles} />
+        </View>
+      </ScrollView>
 
-      );
+    );
 
-   }else{
-   return (
-     <AppLoading/>
-     );
- }
- 
+  } else {
+    return (
+      <AppLoading />
+    );
+  }
+
 }
 

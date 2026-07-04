@@ -219,12 +219,12 @@ export default function OfferDetails(props) {
     </Dialog>
     </Portal>
 
-    <TouchableOpacity activeOpacity={0.9} onPress={showModal}>
+    {/*<TouchableOpacity activeOpacity={0.9} onPress={showModal}>
       <View style={Styles.detailsBuyNow}>
         <Icon source={"cart"} color='white' size={24}></Icon>
         <Text style={Styles.detailsBuyNowLabel}>{Strings.ST58}</Text>
       </View>
-    </TouchableOpacity>
+    </TouchableOpacity> */}
 
       </View>
 

@@ -64,12 +64,10 @@ export default function Settings(props) {
         style={{marginBottom: 10, borderBottomWidth: 1, borderColor: theme === "dark" ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}}
       />
 
-      <View style={Styles.switchRow}>
+      {/* <View style={Styles.switchRow}>
         <Paragraph>{Strings.ST103}</Paragraph>
         <Switch value={theme === "dark" ? true : false} onValueChange={toggleTheme} />
-      </View>
-
-
+      </View> */}
     </View>
     </ScrollView>
 

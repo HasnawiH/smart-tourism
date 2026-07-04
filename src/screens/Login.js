@@ -66,7 +66,7 @@ export default function Login(props) {
         <SafeAreaView style={{flex: 1, justifyContent: 'center'}}>
         <Image source={require('../../assets/new/logo-main-primary.png')} resizeMode={"contain"} style={{width: 80, height: 80, alignSelf: 'center', marginBottom: 10}} />
         <Text style={{fontSize: 28, fontWeight: 'bold', textAlign: 'center', letterSpacing: 2}}>MAJENE</Text>
-        <Text style={{fontSize: 12, textAlign: 'center', letterSpacing: 4, color: '#888', marginBottom: 10}}>CITY GUIDE</Text>
+        <Text style={{fontSize: 12, textAlign: 'center', letterSpacing: 4, color: '#888', marginBottom: 10}}>SMART TOURISM</Text>
 
         <View style={Styles.AuthContent}>
 

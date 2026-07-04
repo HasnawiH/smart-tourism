@@ -151,6 +151,15 @@ export default function PlaceDetails(props) {
         </Col>
     </Grid>
 
+    <View>
+      <Text style={Styles.detailsSectionTitle}>Maps</Text>
+
+      {/* Code Untuk Google Maps */}
+      <View>
+
+      </View>
+    </View>
+
     <Text style={Styles.detailsSectionTitle}>{Strings.ST61}</Text>
 
     <HTMLView value={"<div>"+ item.description +"</div>"} stylesheet={theme === "dark" ? HTMLStylesDark : HTMLStyles}/>
