@@ -18,6 +18,7 @@ import { HTMLStylesDark } from '../config/HTMLStylesDark';
 import HTMLView from 'react-native-htmlview';
 import { Popup } from 'react-native-map-link';
 import PlaceRatingStars from '../components/PlaceRatingStars';
+import MapView, { Marker } from 'react-native-maps';
 
 export default function PlaceDetails(props) {
 
@@ -96,8 +97,18 @@ export default function PlaceDetails(props) {
 
   useEffect(() => {
     getPlaceById(id).then((response) => {
+
+        // !!! - Check data response from func getplacebyid
+        // console.log('data getplacebyid!', response);
+
         setItem(response[0]);
         setIsLoaded(true);
+
+        // !!! - Check data response field latitude and longitude
+        // if (item.latitude && item.longitude) {
+        //   const mapURL = `https://www.google.com/maps?q=${item.latitude},${item.longitude}`;
+        //   console.log('GM URL!', mapURL);
+        // }
     });
   }, []);
 
@@ -155,6 +166,37 @@ export default function PlaceDetails(props) {
       <Text style={Styles.detailsSectionTitle}>Maps</Text>
 
       {/* Code Untuk Google Maps */}
+      <TouchableOpacity
+          style={{ 
+            height: 200,
+            width: '100%',
+            borderRadius: 10,
+            overflow: 'hidden',
+            marginTop: 10,
+            marginBottom: 20
+          }}
+          onPress={() => setVisible(true)}
+        >
+          <MapView
+            style={{ flex: 1 }}
+            initialRegion={{
+              latitude: parseFloat(item.latitude),
+              longitude: parseFloat(item.longitude),
+              latitudeDelta: 0.005,
+              longitudeDelta: 0.005,
+            }}
+            scrollEnabled={false}
+            zoomEnabled={false}
+          >
+            <Marker
+              coordinate={{
+                latitude: parseFloat(item.latitude),
+                longitude: parseFloat(item.longitude),
+              }}
+              title={item.title}
+            />
+          </MapView>
+        </TouchableOpacity>
       <View>
 
       </View>
