@@ -9,7 +9,8 @@ import Preferences from './src/context/Preferences';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Provider as PaperProvider, MD2LightTheme as DefaultThemePaper, MD2DarkTheme as DarkThemePaper } from 'react-native-paper';
 import { NavigationContainer, DefaultTheme as DefaultThemeNav, DarkTheme as DarkThemeNav } from '@react-navigation/native';
-import DrawerNavigation from './src/navigation/DrawerNavigation';
+// import DrawerNavigation from './src/navigation/DrawerNavigation';
+import BottomTabNavigation from './src/navigation/BottomTabNavigation';
 import GuestNavigation from './src/navigation/GuestNavigation';
 import ColorsApp from './src/config/ColorsApp';
 import ConfigApp from './src/config/ConfigApp';
@@ -131,7 +132,8 @@ const App = () => {
         <PaperProvider theme={theme === "dark" ? DarkThemePaper : DefaultThemePaper} settings={{ icon: props => <MaterialIcons {...props} />, }}>
         <StatusBar translucent backgroundColor="transparent" barStyle={theme === "dark" ? "light-content" : "dark-content"}/>
         <NavigationContainer theme={theme === "dark" ? DarkThemeNav : DefaultThemeNav}>
-        {isLogged ? <DrawerNavigation/> : <GuestNavigation/>}
+        {/* {isLogged ? <DrawerNavigation/> : <GuestNavigation/>} */}
+        {isLogged ? <BottomTabNavigation/> : <GuestNavigation/>}
         </NavigationContainer>
         </PaperProvider>
         </LanguageContext.Provider>

@@ -63,7 +63,8 @@ const buttonMenu = () => {
 
 return (
 	<Stack.Navigator screenOptions={navigatorOptions}>
-	<Stack.Screen name="home" component={Home} options={{headerTransparent: true, title: null, headerLeft: () => buttonMenu()}} />
+	{/* <Stack.Screen name="home" component={Home} options={{headerTransparent: true, title: null, headerLeft: () => buttonMenu()}} /> */}
+	<Stack.Screen name="home" component={Home} options={{headerTransparent: true, title: null}} />
 	<Stack.Screen name="profile" component={Profile} options={{title: Strings.ST6, headerLeft: () => buttonBack()}} />
 	<Stack.Screen name="settings" component={Settings} options={{title: Strings.ST108, headerLeft: () => buttonBack()}} />
 	<Stack.Screen name="about" component={About} options={{title: Strings.ST110, headerLeft: () => buttonBack()}} />
