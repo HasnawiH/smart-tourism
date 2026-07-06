@@ -69,6 +69,7 @@ if(isLoaded) {
   <CustomButton Icon="file-document-outline" Label={Strings.ST8} Click={() => onChangeScreen("terms")}/>
   <CustomButton Icon="logout" Label={Strings.ST9} Click={() => signOut(auth)}/>
   <CustomButton Icon="account-cancel-outline" Label={Strings.ST141} Click={() => setVisible(true)}/>
+    <CustomButton Icon="settings-outline" Label={Strings.ST108} Click={() => onChangeScreen("settings")}/>
 
   <Portal>
       <Dialog visible={visible} onDismiss={hideDialog}>
