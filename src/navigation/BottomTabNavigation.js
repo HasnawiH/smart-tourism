@@ -248,6 +248,13 @@ function MainBottomTabs() {
         tabBarInactiveTintColor: '#aaa',
         tabBarStyle: {
           backgroundColor: '#fff',
+          height: 60,
+          paddingBottom: 10,
+          borderTopLeftRadius: 20,
+          borderTopRightRadius: 20,
+          position: 'absolute',
+          borderTopWidth: 0,
+          elevation: 10,
         },
       }}
     >
