@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Animated, View, StyleSheet, ImageBackground, Text, TouchableOpacity, Dimensions, ScrollView } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {map} from 'lodash';
+import { map } from 'lodash';
 import ColorsApp from '../config/ColorsApp';
 
 const deviceWidth = Dimensions.get('window').width
@@ -25,7 +25,7 @@ export default function Gallery(props) {
 
   const getInterval = (offset) => {
     for (let i = 1; i <= intervals; i++) {
-      if (offset+1 < (width / intervals) * i) {
+      if (offset + 1 < (width / intervals) * i) {
         return i;
       }
       if (i == intervals) {
@@ -38,16 +38,16 @@ export default function Gallery(props) {
   for (let i = 1; i <= intervals; i++) {
     bullets.push(
       <Icon
-      name={"circle"}
-      key={i}
-      size={10}
-      color={'#fff'}
-      style={{
-        opacity: interval === i ? 1 : 0.5,
-        marginHorizontal: 2
-      }}
+        name={"circle"}
+        key={i}
+        size={10}
+        color={'#fff'}
+        style={{
+          opacity: interval === i ? 1 : 0.5,
+          marginHorizontal: 2
+        }}
       />
-      );
+    );
   }
 
 
@@ -57,37 +57,37 @@ export default function Gallery(props) {
   images.map((item, i) => {
     const thisImage = (
       <ImageBackground
-      key={`item${i}`}
-      source={{uri: item.image_name}}
-      style={{ width: deviceWidth}}
-      resizeMode={"cover"}
+        key={`item${i}`}
+        source={{ uri: item.image_name }}
+        style={{ width: deviceWidth, height: '100%'}}
+        resizeMode={"cover"}
       />
-      )
+    )
     imageArray.push(thisImage)
   })
 
   return (
     <View style={styles.container} flex={1}>
-    <ScrollView
-    horizontal
-    showsHorizontalScrollIndicator={false}
-    onContentSizeChange={(w, h) => init(w)}
-    onScroll={data => {
-      setWidth(data.nativeEvent.contentSize.width);
-      setInterval(getInterval(data.nativeEvent.contentOffset.x));
-    }}
-    scrollEventThrottle={200}
-    pagingEnabled
-    decelerationRate="fast"
-    >
-    {imageArray}
-    </ScrollView>
-    <View style={styles.barContainer}>
-    {bullets}
-    </View>
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        onContentSizeChange={(w, h) => init(w)}
+        onScroll={data => {
+          setWidth(data.nativeEvent.contentSize.width);
+          setInterval(getInterval(data.nativeEvent.contentOffset.x));
+        }}
+        scrollEventThrottle={200}
+        pagingEnabled
+        decelerationRate="fast"
+      >
+        {imageArray}
+      </ScrollView>
+      <View style={styles.barContainer}>
+        {bullets}
+      </View>
 
     </View>
-    )
+  )
 }
 
 const styles = StyleSheet.create({
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    height: deviceHeight*0.38
+    height: deviceHeight * 0.38
   },
   barContainer: {
     position: 'absolute',

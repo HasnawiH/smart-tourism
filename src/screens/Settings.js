@@ -58,11 +58,11 @@ export default function Settings(props) {
 
       </RadioButton.Group>
 
-      <List.Item
+      {/* <List.Item
         title={Strings.ST105}
         titleStyle={{fontWeight: 'bold'}}
         style={{marginBottom: 10, borderBottomWidth: 1, borderColor: theme === "dark" ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}}
-      />
+      /> */}
 
       {/* <View style={Styles.switchRow}>
         <Paragraph>{Strings.ST103}</Paragraph>

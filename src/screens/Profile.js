@@ -37,12 +37,12 @@ export default function Profile(props) {
 
         deleteUser(user).then(() => {
           // User deleted.
-          }).catch((error) => {
-            Alert.alert(Strings.ST32);
-          });
+        }).catch((error) => {
+          Alert.alert(Strings.ST32);
+        });
 
       }).catch((error) => {
-            Alert.alert(Strings.ST32);
+        Alert.alert(Strings.ST32);
       });
     }
   };
@@ -51,56 +51,56 @@ export default function Profile(props) {
 
   useEffect(() => {
 
-      setUser(auth.currentUser);
-      setIsLoaded(true);
+    setUser(auth.currentUser);
+    setIsLoaded(true);
 
   }, []);
 
-if(isLoaded) {
+  if (isLoaded) {
 
- return (
+    return (
 
-  <ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
-  <SafeAreaView>
+      <ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
+        <SafeAreaView>
 
-  <View style={{marginHorizontal: 30, marginVertical: 40}}>
-  <CustomButton Icon="cart-outline" Label={Strings.ST54} Click={() => onChangeScreen("orders")}/>
-  <CustomButton Icon="bookmark-outline" Label={Strings.ST110} Click={() => onChangeScreen("about")}/>
-  <CustomButton Icon="file-document-outline" Label={Strings.ST8} Click={() => onChangeScreen("terms")}/>
-  <CustomButton Icon="logout" Label={Strings.ST9} Click={() => signOut(auth)}/>
-  <CustomButton Icon="account-cancel-outline" Label={Strings.ST141} Click={() => setVisible(true)}/>
-    <CustomButton Icon="settings-outline" Label={Strings.ST108} Click={() => onChangeScreen("settings")}/>
+          <View style={{ marginHorizontal: 30, marginVertical: 40 }}>
+            {/* <CustomButton Icon="cart-outline" Label={Strings.ST54} Click={() => onChangeScreen("orders")} /> */}
+            <CustomButton Icon="bookmark-outline" Label={Strings.ST110} Click={() => onChangeScreen("about")} />
+            <CustomButton Icon="file-document-outline" Label={Strings.ST8} Click={() => onChangeScreen("terms")} />
+            <CustomButton Icon="logout" Label={Strings.ST9} Click={() => signOut(auth)} />
+            <CustomButton Icon="account-cancel-outline" Label={Strings.ST141} Click={() => setVisible(true)} />
+            <CustomButton Icon="cog-outline" Label={Strings.ST108} Click={() => onChangeScreen("settings")} />
 
-  <Portal>
-      <Dialog visible={visible} onDismiss={hideDialog}>
-        <Dialog.Content>
-          <Title>{Strings.ST144}</Title>
-          <Paragraph style={{marginVertical: 10}}>{Strings.ST145}</Paragraph>
-          <TextInput
-          value={password}
-          mode="outlined"
-          secureTextEntry={true}
-          onChangeText={text => setPassword(text)}
-        />
-        </Dialog.Content>
-        <Dialog.Actions style={{marginBottom: 8, marginTop: -20, marginHorizontal: 8}}>
-          <Button onPress={() => hideDialog()}>{Strings.ST142}</Button>
-          <Button onPress={() => deleteAccount()}>{Strings.ST143}</Button>
-        </Dialog.Actions>
-      </Dialog>
-    </Portal>
+            <Portal>
+              <Dialog visible={visible} onDismiss={hideDialog}>
+                <Dialog.Content>
+                  <Title>{Strings.ST144}</Title>
+                  <Paragraph style={{ marginVertical: 10 }}>{Strings.ST145}</Paragraph>
+                  <TextInput
+                    value={password}
+                    mode="outlined"
+                    secureTextEntry={true}
+                    onChangeText={text => setPassword(text)}
+                  />
+                </Dialog.Content>
+                <Dialog.Actions style={{ marginBottom: 8, marginTop: -20, marginHorizontal: 8 }}>
+                  <Button onPress={() => hideDialog()}>{Strings.ST142}</Button>
+                  <Button onPress={() => deleteAccount()}>{Strings.ST143}</Button>
+                </Dialog.Actions>
+              </Dialog>
+            </Portal>
 
-  </View>
-  </SafeAreaView>
-  </ScrollView>
+          </View>
+        </SafeAreaView>
+      </ScrollView>
 
-      );
+    );
 
-   }else{
-   return (
-     <AppLoading/>
-     );
- }
- 
+  } else {
+    return (
+      <AppLoading />
+    );
+  }
+
 }
 

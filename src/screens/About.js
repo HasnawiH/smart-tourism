@@ -29,7 +29,7 @@ export default function About() {
 
       <ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
         <View style={Styles.PageScreen}>
-          <Image source={theme === "dark" ? require('../../assets/logo-white.png') : require('../../assets/logo.png')} resizeMode={"contain"} style={Styles.PageLogo} />
+          {/* <Image source={theme === "dark" ? require('../../assets/logo-white.png') : require('../../assets/logo.png')} resizeMode={"contain"} style={Styles.PageLogo} /> */}
           <HTMLView value={"<div>" + item.st_aboutus + "</div>"} stylesheet={theme === "dark" ? HTMLStylesDark : HTMLStyles} />
         </View>
       </ScrollView>
